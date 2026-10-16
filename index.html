@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="DON RICO OFFICIAL — Original music, singles and digital releases. Discover the official music catalog.">
+  <title>DON RICO OFFICIAL | Official Music</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #121212;
+      --gold: #d8b568;
+      --gold-light: #f5dfa0;
+      --text: #f8f5ee;
+      --muted: #b8b1a4;
+      --border: rgba(216,181,104,.32);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,8,8,.96);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--gold-light);
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      min-height: 590px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 44px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+    }
+
+    h1 span { color: var(--gold); }
+
+    .intro {
+      max-width: 530px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background .2s, color .2s;
+      cursor: pointer;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: #080808;
+    }
+
+    .button:hover {
+      background: var(--gold-light);
+      color: #080808;
+    }
+
+    .artwork {
+      min-height: 390px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 40%, rgba(216,181,104,.17), transparent 60%),
+        linear-gradient(145deg, #1d1911, #090909 65%);
+      box-shadow: 0 20px 70px rgba(0,0,0,.35);
+    }
+
+    .artwork-inner {
+      border: 1px solid rgba(216,181,104,.45);
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .artwork-logo {
+      color: var(--gold-light);
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 1.1;
+    }
+
+    .artwork-subtitle {
+      margin-top: 16px;
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: var(--muted);
+    }
+
+    section { padding: 76px 0; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      margin: 8px 0;
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .music-card {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .cover-placeholder {
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      background:
+        radial-gradient(ellipse at center, rgba(216,181,104,.2), transparent 65%),
+        linear-gradient(135deg, #211b10, #080808);
+      border-right: 1px solid var(--border);
+    }
+
+    .cover-placeholder strong {
+      font-size: 24px;
+      color: var(--gold-light);
+      line-height: 1.15;
+    }
+
+    .cover-placeholder span {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .track-info {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .tag {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .track-info h3 {
+      margin: 12px 0 8px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .track-info p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .price {
+      color: var(--gold-light);
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 14px;
+    }
+
+    .future {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .donation-panel {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 38px;
+      text-align: center;
+      border: 1px solid var(--border);
+      background: linear-gradient(140deg, #17140e, #0c0c0c);
+      border-radius: 5px;
+    }
+
+    .donation-panel h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: 30px;
+    }
+
+    .donation-panel p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 22px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer strong { color: var(--gold); }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 48px;
+      }
+
+      .artwork { min-height: 300px; }
+      .artwork-inner { min-height: 260px; }
+
+      .music-card { grid-template-columns: 1fr; }
+
+      .cover-placeholder {
+        min-height: 220px;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .track-info { padding: 25px; }
+      .donation-panel { padding: 26px 20px; }
+      .brand { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="DON RICO OFFICIAL home">
+        DON RICO OFFICIAL
+      </a>
+      <a class="nav-link" href="#music">Music Catalog</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <div class="eyebrow">Official Music Website</div>
+        <h1>WELCOME TO<br><span>DON RICO</span><br>OFFICIAL</h1>
+        <p class="intro">
+          Discover the music, explore the releases and follow the official
+          journey of DON RICO. This is the home for original tracks and
+          upcoming digital releases.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#music">Explore Music</a>
+          <a class="button" href="#donations">Support the Project</a>
+        </div>
+      </div>
+
+      <div class="artwork" aria-label="DON RICO OFFICIAL brand artwork">
+        <div class="artwork-inner">
+          <div class="artwork-logo">DON RICO</div>
+          <div class="artwork-subtitle">OFFICIAL MUSIC</div>
+          <p style="color:#b8b1a4;margin-top:28px;letter-spacing:3px;font-size:10px">
+            ORIGINAL RELEASES
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" style="background:#0d0d0d">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">The Official Store</div>
+          <h2>Music Catalog</h2>
+          <p>Original music and digital releases by DON RICO OFFICIAL.</p>
+        </div>
+
+        <article class="music-card">
+          <div class="cover-placeholder">
+            <strong>A MI ME GUSTA<br>BIG TITS</strong>
+            <span>DON RICO OFFICIAL</span>
+          </div>
+          <div class="track-info">
+            <div class="tag">Featured Single</div>
+            <h3>A Mi Me Gusta Big Tits</h3>
+            <p>
+              The first featured release. The digital store will provide
+              the downloadable music file after the purchase system is configured.
+            </p>
+            <div class="price">From €1.00</div>
+            <span class="status">Store setup in progress</span>
+            <p class="notice">
+              Secure checkout and MP3 delivery will be enabled after payment
+              configuration and testing.
+            </p>
+          </div>
+        </article>
+
+        <p class="future">
+          More singles and albums will be added to the catalog over time.
+        </p>
+      </div>
+    </section>
+
+    <section id="donations">
+      <div class="container">
+        <div class="donation-panel">
+          <div class="eyebrow">Make a Difference</div>
+          <h2>Support the Project</h2>
+          <p>
+            A dedicated space for voluntary contributions to the earthquake
+            support project. Details about the initiative and the donation
+            destination will be published here before contributions open.
+          </p>
+          <span class="status">Donations setup in progress</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>DON RICO OFFICIAL</strong><br>
+      Official Music Website
+      <p>© <span id="year"></span> DON RICO OFFICIAL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
