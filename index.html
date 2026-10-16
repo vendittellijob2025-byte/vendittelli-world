@@ -1,442 +1,316 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="DON RICO OFFICIAL — Original music, singles and digital releases. Discover the official music catalog.">
-  <title>DON RICO OFFICIAL | Official Music</title>
+  <meta name="theme-color" content="#050b19">
+  <meta name="description" content="VENDITTELLI WORLD: musica, ricerca scientifica, libri, fumetti e universi narrativi.">
+  <title>VENDITTELLI WORLD — Official Website</title>
+
   <style>
     :root {
-      --bg: #080808;
-      --panel: #121212;
-      --gold: #d8b568;
-      --gold-light: #f5dfa0;
-      --text: #f8f5ee;
-      --muted: #b8b1a4;
-      --border: rgba(216,181,104,.32);
+      color-scheme: dark;
+      --background: #050b19;
+      --gold: #e4c782;
+      --text: #f5f5f7;
+      --muted: #b7c0d0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 0%, #17294a 0%, transparent 48%),
+        var(--background);
     }
 
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1120px, 92%);
+    .page {
+      width: min(1180px, 100%);
       margin: 0 auto;
+      padding: 52px 24px 28px;
     }
 
     header {
-      border-bottom: 1px solid var(--border);
-      background: rgba(8,8,8,.96);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      text-align: center;
+      margin-bottom: 42px;
     }
 
     .brand {
-      color: var(--gold-light);
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 2px;
+      margin: 0;
+      color: var(--gold);
+      font-size: clamp(2.3rem, 6vw, 4.8rem);
+      font-weight: 800;
+      letter-spacing: clamp(2px, 1vw, 8px);
+      line-height: 1.1;
+      text-shadow: 0 5px 35px #e4c78220;
     }
 
-    .nav-link {
+    .subtitle {
+      max-width: 680px;
+      margin: 20px auto 0;
       color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
 
-    .hero {
-      min-height: 590px;
+    .gold-line {
+      width: 100px;
+      height: 2px;
+      margin: 28px auto 0;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .sections {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 44px;
-      padding-top: 64px;
-      padding-bottom: 64px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .panel {
+      position: relative;
+      display: flex;
+      min-height: 440px;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 36px;
+      border: 1px solid #ffffff20;
+      border-radius: 20px;
+      background: #111a2c;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 18px 55px #00000040;
+      isolation: isolate;
+      transition: transform .25s ease, border-color .25s ease,
+                  box-shadow .25s ease;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      transition: transform .5s ease;
+    }
+
+    .music::before {
+      background:
+        radial-gradient(ellipse at 75% 20%, #c59a4b48, transparent 42%),
+        linear-gradient(145deg, #2b211d, #121117 55%, #05060b);
+    }
+
+    .research::before {
+      background:
+        radial-gradient(ellipse at 75% 18%, #4385c84d, transparent 43%),
+        linear-gradient(145deg, #172c4c, #0c1428 58%, #050914);
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        transparent 10%,
+        #05070ce0 100%
+      );
+    }
+
+    .panel:hover,
+    .panel:focus-visible {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 24px 65px #00000065;
+      outline: none;
+    }
+
+    .panel:hover::before {
+      transform: scale(1.05);
+    }
+
+    .symbol {
+      position: absolute;
+      top: 34px;
+      left: 36px;
+      display: grid;
+      width: 86px;
+      height: 86px;
+      place-items: center;
+      border: 1px solid #ffffff35;
+      border-radius: 50%;
+      background: #ffffff08;
+      color: var(--gold);
+      font-size: 2.6rem;
+    }
+
+    .research .symbol {
+      color: #a9d1ff;
     }
 
     .eyebrow {
+      margin: 0 0 12px;
       color: var(--gold);
+      font-size: .78rem;
+      font-weight: bold;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: 700;
     }
 
-    h1 {
-      margin: 18px 0;
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.02;
-      letter-spacing: -2px;
+    .research .eyebrow {
+      color: #a9d1ff;
     }
 
-    h1 span { color: var(--gold); }
-
-    .intro {
-      max-width: 530px;
-      color: var(--muted);
-      font-size: 17px;
+    .panel h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 1.15;
+      overflow-wrap: anywhere;
     }
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+    .panel p {
+      max-width: 440px;
+      margin: 0;
+      color: #d1d6e1;
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
-    .button {
+    .enter {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 13px 20px;
-      border: 1px solid var(--gold);
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 800;
+      gap: 12px;
+      margin-top: 28px;
+      font-size: .9rem;
+      font-weight: bold;
       letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: background .2s, color .2s;
-      cursor: pointer;
-    }
-
-    .button.primary {
-      background: var(--gold);
-      color: #080808;
-    }
-
-    .button:hover {
-      background: var(--gold-light);
-      color: #080808;
-    }
-
-    .artwork {
-      min-height: 390px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background:
-        radial-gradient(ellipse at 50% 40%, rgba(216,181,104,.17), transparent 60%),
-        linear-gradient(145deg, #1d1911, #090909 65%);
-      box-shadow: 0 20px 70px rgba(0,0,0,.35);
-    }
-
-    .artwork-inner {
-      border: 1px solid rgba(216,181,104,.45);
-      width: 100%;
-      min-height: 340px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .artwork-logo {
-      color: var(--gold-light);
-      font-size: clamp(32px, 5vw, 54px);
-      font-weight: 900;
-      letter-spacing: 3px;
-      line-height: 1.1;
-    }
-
-    .artwork-subtitle {
-      margin-top: 16px;
-      font-size: 11px;
-      letter-spacing: 5px;
-      color: var(--muted);
-    }
-
-    section { padding: 76px 0; }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-      margin: 8px 0;
-      font-size: clamp(28px, 4vw, 42px);
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .music-card {
-      max-width: 800px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      overflow: hidden;
-      background: var(--panel);
-    }
-
-    .cover-placeholder {
-      min-height: 290px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-      background:
-        radial-gradient(ellipse at center, rgba(216,181,104,.2), transparent 65%),
-        linear-gradient(135deg, #211b10, #080808);
-      border-right: 1px solid var(--border);
-    }
-
-    .cover-placeholder strong {
-      font-size: 24px;
-      color: var(--gold-light);
-      line-height: 1.15;
-    }
-
-    .cover-placeholder span {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    .track-info {
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .tag {
       color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
     }
 
-    .track-info h3 {
-      margin: 12px 0 8px;
-      font-size: 26px;
-      line-height: 1.25;
+    .research .enter {
+      color: #a9d1ff;
     }
 
-    .track-info p {
-      color: var(--muted);
-      margin: 0 0 18px;
+    .arrow {
+      font-size: 1.4rem;
+      transition: transform .2s ease;
     }
 
-    .price {
-      color: var(--gold-light);
-      font-size: 25px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .notice {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 14px;
-    }
-
-    .future {
-      margin-top: 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .donation-panel {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 38px;
-      text-align: center;
-      border: 1px solid var(--border);
-      background: linear-gradient(140deg, #17140e, #0c0c0c);
-      border-radius: 5px;
-    }
-
-    .donation-panel h2 {
-      margin-top: 0;
-      color: var(--gold-light);
-      font-size: 30px;
-    }
-
-    .donation-panel p {
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 22px;
-    }
-
-    .status {
-      display: inline-block;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    .panel:hover .arrow {
+      transform: translateX(5px);
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 0;
+      padding: 36px 10px 0;
+      color: #8792a6;
       text-align: center;
-      color: var(--muted);
-      font-size: 12px;
+      font-size: .85rem;
+      line-height: 1.8;
     }
 
-    footer strong { color: var(--gold); }
+    @media (max-width: 700px) {
+      .page {
+        padding: 36px 16px 22px;
+      }
 
-    @media (max-width: 760px) {
-      .hero {
+      header {
+        margin-bottom: 30px;
+      }
+
+      .sections {
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding-top: 48px;
+        gap: 18px;
       }
 
-      .artwork { min-height: 300px; }
-      .artwork-inner { min-height: 260px; }
-
-      .music-card { grid-template-columns: 1fr; }
-
-      .cover-placeholder {
-        min-height: 220px;
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
+      .panel {
+        min-height: 370px;
+        padding: 27px;
       }
 
-      .track-info { padding: 25px; }
-      .donation-panel { padding: 26px 20px; }
-      .brand { font-size: 16px; }
+      .symbol {
+        top: 26px;
+        left: 27px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#" aria-label="DON RICO OFFICIAL home">
-        DON RICO OFFICIAL
-      </a>
-      <a class="nav-link" href="#music">Music Catalog</a>
-    </div>
-  </header>
+  <main class="page">
+    <header>
+      <h1 class="brand">VENDITTELLI WORLD</h1>
+      <p class="subtitle">
+        Un mondo di musica, ricerca scientifica, libri, fumetti
+        e universi narrativi. Scegli la sezione che vuoi esplorare.
+      </p>
+      <div class="gold-line" aria-hidden="true"></div>
+    </header>
 
-  <main>
-    <section class="container hero">
-      <div>
-        <div class="eyebrow">Official Music Website</div>
-        <h1>WELCOME TO<br><span>DON RICO</span><br>OFFICIAL</h1>
-        <p class="intro">
-          Discover the music, explore the releases and follow the official
-          journey of DON RICO. This is the home for original tracks and
-          upcoming digital releases.
-        </p>
-        <div class="actions">
-          <a class="button primary" href="#music">Explore Music</a>
-          <a class="button" href="#donations">Support the Project</a>
-        </div>
-      </div>
+    <section class="sections" aria-label="Le sezioni ufficiali">
 
-      <div class="artwork" aria-label="DON RICO OFFICIAL brand artwork">
-        <div class="artwork-inner">
-          <div class="artwork-logo">DON RICO</div>
-          <div class="artwork-subtitle">OFFICIAL MUSIC</div>
-          <p style="color:#b8b1a4;margin-top:28px;letter-spacing:3px;font-size:10px">
-            ORIGINAL RELEASES
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="music" style="background:#0d0d0d">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">The Official Store</div>
-          <h2>Music Catalog</h2>
-          <p>Original music and digital releases by DON RICO OFFICIAL.</p>
-        </div>
-
-        <article class="music-card">
-          <div class="cover-placeholder">
-            <strong>A MI ME GUSTA<br>BIG TITS</strong>
-            <span>DON RICO OFFICIAL</span>
-          </div>
-          <div class="track-info">
-            <div class="tag">Featured Single</div>
-            <h3>A Mi Me Gusta Big Tits</h3>
-            <p>
-              The first featured release. The digital store will provide
-              the downloadable music file after the purchase system is configured.
-            </p>
-            <div class="price">From €1.00</div>
-            <span class="status">Store setup in progress</span>
-            <p class="notice">
-              Secure checkout and MP3 delivery will be enabled after payment
-              configuration and testing.
-            </p>
-          </div>
-        </article>
-
-        <p class="future">
-          More singles and albums will be added to the catalog over time.
-        </p>
-      </div>
-    </section>
-
-    <section id="donations">
-      <div class="container">
-        <div class="donation-panel">
-          <div class="eyebrow">Make a Difference</div>
-          <h2>Support the Project</h2>
+      <a class="panel music" href="./don-rico-official/">
+        <div class="symbol" aria-hidden="true">♫</div>
+        <div>
+          <p class="eyebrow">Musica ufficiale</p>
+          <h2>DON RICO OFFICIAL</h2>
           <p>
-            A dedicated space for voluntary contributions to the earthquake
-            support project. Details about the initiative and the donation
-            destination will be published here before contributions open.
+            Scopri la musica originale, ascolta i brani e accedi
+            al catalogo dei prodotti musicali digitali.
           </p>
-          <span class="status">Donations setup in progress</span>
+          <span class="enter">
+            ENTRA NEL MONDO MUSICALE
+            <span class="arrow" aria-hidden="true">→</span>
+          </span>
         </div>
-      </div>
+      </a>
+
+      <a class="panel research" href="./vendittelli-carlo/">
+        <div class="symbol" aria-hidden="true">✧</div>
+        <div>
+          <p class="eyebrow">Scienza e creatività</p>
+          <h2>VENDITTELLI CARLO</h2>
+          <p>
+            Ricercatore scientifico e creatore del Vendittelli Universe.
+            Libri, fumetti, progetti di ricerca e mondi narrativi.
+          </p>
+          <span class="enter">
+            ENTRA NEL MIO MONDO
+            <span class="arrow" aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+
     </section>
+
+    <footer>
+      <p>© <span id="year"></span> VENDITTELLI WORLD. Tutti i diritti riservati.</p>
+      <p>Musica · Ricerca scientifica · Libri · Fumetti</p>
+    </footer>
   </main>
 
-  <footer>
-    <div class="container">
-      <strong>DON RICO OFFICIAL</strong><br>
-      Official Music Website
-      <p>© <span id="year"></span> DON RICO OFFICIAL. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
