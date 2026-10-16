@@ -1,349 +1,107 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <title>DON RICO OFFICIAL — Music & Digital Store</title>
-  <meta name="description" content="Discover DON RICO OFFICIAL: original music, digital tracks and exclusive releases.">
-  <style>
-    :root {
-      --gold: #d8b56a;
-      --gold-light: #f5df9b;
-      --bg: #080808;
-      --panel: #141414;
-      --muted: #b8b8b8;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; }
-
-    .topbar {
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      border-bottom: 1px solid #292929;
-    }
-
-    .brand {
-      color: var(--gold-light);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .back {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .back:hover { color: var(--gold-light); }
-
-    .hero {
-      min-height: 440px;
-      padding: 90px 20px 75px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      background:
-        radial-gradient(ellipse at center, #302414 0%, #14100b 35%, #080808 72%);
-      border-bottom: 1px solid #28231a;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    h1 {
-      margin: 15px 0;
-      font-size: clamp(38px, 8vw, 78px);
-      line-height: 1.08;
-      letter-spacing: 3px;
-    }
-
-    h1 span { color: var(--gold-light); }
-
-    .hero p {
-      max-width: 650px;
-      color: #d0d0d0;
-      margin: 18px auto 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 23px;
-      border: 1px solid var(--gold);
-      border-radius: 3px;
-      background: var(--gold);
-      color: #111;
-      text-decoration: none;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .button:hover { background: var(--gold-light); }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--gold-light);
-    }
-
-    main {
-      width: min(1100px, 90%);
-      margin: 0 auto;
-      padding: 55px 0 75px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      font-size: clamp(26px, 4vw, 38px);
-    }
-
-    .section-heading p { color: var(--muted); }
-
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
-      gap: 22px;
-    }
-
-    .product {
-      overflow: hidden;
-      background: var(--panel);
-      border: 1px solid #2b2b2b;
-      border-radius: 7px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .artwork {
-      min-height: 210px;
-      padding: 24px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 35%, #574326, #21190f 48%, #101010 80%);
-      border-bottom: 1px solid #393027;
-    }
-
-    .artwork .disc {
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      border: 7px solid #171717;
-      background: repeating-radial-gradient(circle, #292929 0 3px, #101010 4px 7px);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 0 0 1px var(--gold), 0 0 35px #000;
-    }
-
-    .disc span {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: #111;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    .product-body {
-      padding: 22px;
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-    }
-
-    .product h3 { margin: 0 0 8px; font-size: 21px; }
-
-    .product p {
-      margin: 0 0 17px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .price {
-      color: var(--gold-light);
-      font-weight: 800;
-      font-size: 23px;
-      margin-top: auto;
-      padding-bottom: 17px;
-    }
-
-    .product .button { text-align: center; width: 100%; }
-
-    .notice {
-      margin-top: 30px;
-      padding: 18px;
-      border: 1px solid #383024;
-      border-radius: 5px;
-      color: #c9c0b0;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    .about {
-      margin-top: 65px;
-      padding: 32px;
-      text-align: center;
-      background: #111;
-      border: 1px solid #292929;
-      border-radius: 7px;
-    }
-
-    .about h2 { color: var(--gold-light); }
-
-    .about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: var(--muted);
-    }
-
-    footer {
-      padding: 25px 6%;
-      text-align: center;
-      border-top: 1px solid #292929;
-      color: #999;
-      font-size: 12px;
-    }
-
-    footer a { color: var(--gold-light); }
-
-    @media (max-width: 500px) {
-      .topbar { padding: 15px 5%; }
-      .brand { font-size: 13px; letter-spacing: 1px; }
-      .hero { min-height: 390px; padding: 65px 18px; }
-      main { width: 90%; padding-top: 40px; }
-      .about { padding: 23px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>DON RICO OFFICIAL — Music Store</title>
+<meta name="description" content="DON RICO OFFICIAL. Original music and digital releases.">
+<style>
+:root{--gold:#d8b56a;--light:#f5df9b;--bg:#080808;--panel:#151515;--muted:#bdbdbd}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}
+header{padding:18px 6%;display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #292929}
+.brand{font-weight:800;letter-spacing:2px;color:var(--light);text-decoration:none}
+.back{color:#ccc;text-decoration:none}
+.hero{text-align:center;padding:75px 20px;background:radial-gradient(ellipse at center,#382a17,#15100a 42%,#080808 78%);border-bottom:1px solid #302719}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:bold}
+h1{font-size:clamp(38px,8vw,76px);line-height:1.1;letter-spacing:3px;margin:16px 0}
+h1 span{color:var(--light)}
+.hero p{max-width:620px;margin:18px auto;color:#ddd}
+main{width:min(1000px,90%);margin:auto;padding:45px 0 70px}
+.heading{text-align:center;margin-bottom:28px}
+.heading h2{font-size:clamp(26px,4vw,38px);margin:0}
+.heading p,.description{color:var(--muted)}
+.card{max-width:650px;margin:auto;background:var(--panel);border:1px solid #393024;border-radius:8px;overflow:hidden}
+.cover{min-height:230px;display:grid;place-items:center;background:radial-gradient(circle,#6a4d25,#21190f 48%,#101010 80%)}
+.disc{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle,#262626 0 3px,#101010 4px 7px);border:5px solid #111;box-shadow:0 0 0 1px var(--gold),0 0 35px #000}
+.disc span{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-weight:900;font-size:12px}
+.content{padding:25px}
+.content h3{font-size:25px;margin:0 0 8px}
+.tag{display:inline-block;color:var(--gold);border:1px solid #5b4727;padding:3px 9px;border-radius:3px;font-size:12px}
+audio{width:100%;margin:18px 0}
+.price{font-size:27px;font-weight:bold;color:var(--light);margin:12px 0}
+button{font:inherit;cursor:pointer}
+.buy{display:block;width:100%;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#111;font-weight:bold;padding:14px 18px}
+.buy:hover{background:var(--light)}
+.notice{font-size:13px;color:#bdbdbd;margin-top:16px}
+.about{text-align:center;padding:28px;margin-top:45px;background:#111;border:1px solid #292929;border-radius:6px}
+.about h2{color:var(--light)}
+.about p{max-width:650px;margin:auto;color:var(--muted)}
+footer{text-align:center;padding:24px;border-top:1px solid #292929;color:#999;font-size:12px}
+footer a{color:var(--light)}
+@media(max-width:480px){header{padding:14px 5%;font-size:13px}.hero{padding:58px 16px}.content{padding:19px}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="../">VENDITTELLI WORLD</a>
-    <a class="back" href="../">← Back to main page</a>
-  </header>
+<header>
+<a class="brand" href="../">VENDITTELLI WORLD</a>
+<a class="back" href="../">← Torna alla homepage</a>
+</header>
 
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Independent Music & Digital Releases</div>
-      <h1>DON RICO<br><span>OFFICIAL</span></h1>
-      <p>Original music. A distinctive sound. Discover digital releases and exclusive music from DON RICO OFFICIAL.</p>
-      <a class="button" href="#music">EXPLORE THE MUSIC</a>
-    </div>
-  </section>
+<section class="hero">
+<div class="eyebrow">Independent Music & Digital Releases</div>
+<h1>DON RICO<br><span>OFFICIAL</span></h1>
+<p>Musica originale. Un'identità distintiva. Scopri le pubblicazioni digitali ufficiali di DON RICO.</p>
+</section>
 
-  <main>
-    <section id="music">
-      <div class="section-heading">
-        <h2>Music Store</h2>
-        <p>Discover the releases available in the DON RICO OFFICIAL catalog.</p>
-      </div>
+<main>
+<section>
+<div class="heading">
+<h2>Music Store</h2>
+<p>Ascolta il brano e scopri la pubblicazione digitale.</p>
+</div>
 
-      <div class="catalog">
-        <article class="product">
-          <div class="artwork" aria-hidden="true">
-            <div class="disc"><span>DR</span></div>
-          </div>
-          <div class="product-body">
-            <h3>DON RICO — Digital Release 01</h3>
-            <p>Digital music release. The final track, cover art and product details can be added when the release is ready.</p>
-            <div class="price">$1.00 USD</div>
-            <button class="button buy-button" type="button" data-product="digital-release-01">
-              Purchase — checkout setup pending
-            </button>
-          </div>
-        </article>
+<article class="card">
+<div class="cover" aria-hidden="true"><div class="disc"><span>DON RICO</span></div></div>
+<div class="content">
+<span class="tag">DIGITAL MUSIC</span>
+<h3>A Mi Me Gusta Big Tits</h3>
+<p class="description">DON RICO OFFICIAL — pubblicazione musicale digitale.</p>
 
-        <article class="product">
-          <div class="artwork" aria-hidden="true">
-            <div class="disc"><span>DR</span></div>
-          </div>
-          <div class="product-body">
-            <h3>DON RICO — Exclusive Track</h3>
-            <p>An additional digital music product slot, ready for its official title, description and audio file.</p>
-            <div class="price">Price to be confirmed</div>
-            <button class="button secondary buy-button" type="button" data-product="exclusive-track">
-              Product coming soon
-            </button>
-          </div>
-        </article>
+<audio controls preload="metadata">
+<source src="./A%20Mi%20Me%20Gusta%20Big%20Tits_DonRicoOfficial.mp3" type="audio/mpeg">
+Il tuo browser non supporta il lettore audio.
+</audio>
 
-        <article class="product">
-          <div class="artwork" aria-hidden="true">
-            <div class="disc"><span>DR</span></div>
-          </div>
-          <div class="product-body">
-            <h3>DON RICO — Digital Collection</h3>
-            <p>A future collection for multiple tracks or other digital music products.</p>
-            <div class="price">Price to be confirmed</div>
-            <button class="button secondary buy-button" type="button" data-product="digital-collection">
-              Product coming soon
-            </button>
-          </div>
-        </article>
-      </div>
+<div class="price">$1.00 USD</div>
+<button class="buy" id="buyButton" type="button">Acquisto di prova — checkout da configurare</button>
+<p class="notice" id="checkoutNotice">Il pagamento non è ancora attivo. Nessun addebito verrà effettuato da questo pulsante. Il checkout PayPal Sandbox deve essere collegato prima di testare l'acquisto.</p>
+</div>
+</article>
+</section>
 
-      <div class="notice">
-        Secure payment integration is not active yet. The purchase button is intentionally disabled for transactions until the checkout and digital delivery are configured and tested.
-      </div>
-    </section>
+<section class="about">
+<h2>About DON RICO OFFICIAL</h2>
+<p>DON RICO OFFICIAL è il progetto musicale all'interno di Vendittelli World. Questa pagina presenta le pubblicazioni digitali ufficiali e sarà aggiornata con i dettagli definitivi dei prodotti.</p>
+</section>
+</main>
 
-    <section class="about">
-      <h2>About DON RICO OFFICIAL</h2>
-      <p>
-        DON RICO OFFICIAL is the music identity within Vendittelli World.
-        This page is designed to present original music and digital products in one place.
-        Official releases, cover artwork, audio previews and purchase links will be added as they become available.
-      </p>
-    </section>
-  </main>
+<footer>
+<p>© <span id="year"></span> DON RICO OFFICIAL · Vendittelli World</p>
+<a href="../">VENDITTELLI WORLD</a>
+</footer>
 
-  <footer>
-    <p>© <span id="year"></span> DON RICO OFFICIAL · Vendittelli World</p>
-    <p><a href="../">Return to Vendittelli World</a></p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    document.querySelectorAll(".buy-button").forEach(function (button) {
-      button.addEventListener("click", function () {
-        alert(
-          "Checkout is not active yet. No payment has been taken. " +
-          "PayPal Sandbox and digital product delivery must be configured before purchases can be completed."
-        );
-      });
-    });
-  </script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("buyButton").addEventListener("click", function () {
+  document.getElementById("checkoutNotice").textContent =
+    "Checkout non ancora configurato. Nessun pagamento è stato eseguito. Il collegamento PayPal Sandbox verrà aggiunto dopo la configurazione sicura delle credenziali.";
+});
+</script>
 </body>
 </html>
 ```
