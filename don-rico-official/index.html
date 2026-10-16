@@ -1,99 +1,361 @@
-```html
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
-<title>DON RICO OFFICIAL — Music Store</title>
-<meta name="description" content="DON RICO OFFICIAL. Original music and digital releases.">
+<meta name="description" content="DON RICO OFFICIAL — musica originale e singoli ufficiali.">
+<title>DON RICO OFFICIAL — Official Music</title>
 <style>
-:root{--gold:#d8b56a;--light:#f5df9b;--bg:#080808;--panel:#151515;--muted:#bdbdbd}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-a{color:inherit}
-header{padding:18px 6%;display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #292929}
-.brand{font-weight:800;letter-spacing:2px;color:var(--light);text-decoration:none}
-.back{color:#ccc;text-decoration:none}
-.hero{text-align:center;padding:75px 20px;background:radial-gradient(ellipse at center,#382a17,#15100a 42%,#080808 78%);border-bottom:1px solid #302719}
-.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:bold}
-h1{font-size:clamp(38px,8vw,76px);line-height:1.1;letter-spacing:3px;margin:16px 0}
-h1 span{color:var(--light)}
-.hero p{max-width:620px;margin:18px auto;color:#ddd}
-main{width:min(1000px,90%);margin:auto;padding:45px 0 70px}
-.heading{text-align:center;margin-bottom:28px}
-.heading h2{font-size:clamp(26px,4vw,38px);margin:0}
-.heading p,.description{color:var(--muted)}
-.card{max-width:650px;margin:auto;background:var(--panel);border:1px solid #393024;border-radius:8px;overflow:hidden}
-.cover{min-height:230px;display:grid;place-items:center;background:radial-gradient(circle,#6a4d25,#21190f 48%,#101010 80%)}
-.disc{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle,#262626 0 3px,#101010 4px 7px);border:5px solid #111;box-shadow:0 0 0 1px var(--gold),0 0 35px #000}
-.disc span{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-weight:900;font-size:12px}
-.content{padding:25px}
-.content h3{font-size:25px;margin:0 0 8px}
-.tag{display:inline-block;color:var(--gold);border:1px solid #5b4727;padding:3px 9px;border-radius:3px;font-size:12px}
-audio{width:100%;margin:18px 0}
-.price{font-size:27px;font-weight:bold;color:var(--light);margin:12px 0}
-button{font:inherit;cursor:pointer}
-.buy{display:block;width:100%;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#111;font-weight:bold;padding:14px 18px}
-.buy:hover{background:var(--light)}
-.notice{font-size:13px;color:#bdbdbd;margin-top:16px}
-.about{text-align:center;padding:28px;margin-top:45px;background:#111;border:1px solid #292929;border-radius:6px}
-.about h2{color:var(--light)}
-.about p{max-width:650px;margin:auto;color:var(--muted)}
-footer{text-align:center;padding:24px;border-top:1px solid #292929;color:#999;font-size:12px}
-footer a{color:var(--light)}
-@media(max-width:480px){header{padding:14px 5%;font-size:13px}.hero{padding:58px 16px}.content{padding:19px}}
+:root {
+  --gold: #f6c76a;
+  --gold2: #b87519;
+  --ink: #080706;
+  --panel: #14110d;
+  --muted: #c9bda8;
+  --white: #fff8eb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.topline {
+  height: 3px;
+  background: linear-gradient(90deg,#70420a,var(--gold),#fff1b2,var(--gold2));
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1180px;
+  margin: auto;
+  padding: 22px 24px;
+}
+.brand {
+  font-family: Georgia, serif;
+  letter-spacing: .09em;
+  font-size: 28px;
+  color: var(--gold);
+  text-decoration: none;
+}
+.brand span {
+  display: block;
+  text-align: center;
+  font: 600 10px Arial, sans-serif;
+  letter-spacing: .45em;
+  color: #fff0c4;
+}
+.navlinks {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+.navlinks a { text-decoration: none; }
+.navlinks a:hover { color: var(--gold); }
+.hero {
+  max-width: 1180px;
+  margin: auto;
+  padding: 25px 24px 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+}
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+h1 {
+  font: normal clamp(42px,6vw,76px)/1.05 Georgia,serif;
+  margin: 18px 0;
+  color: #fff3d8;
+}
+h1 em { color: var(--gold); }
+.hero p, .muted { color: var(--muted); }
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+.btn.primary {
+  background: linear-gradient(120deg,#f9d98e,#b8781c);
+  color: #160d03;
+  border: 0;
+}
+.btn.secondary { color: var(--gold); }
+.heroart img {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 1px solid #bd872c55;
+  box-shadow: 0 25px 70px #000b;
+}
+.section {
+  padding: 65px 24px;
+  border-top: 1px solid #ffffff10;
+}
+.wrap { max-width: 1180px; margin: auto; }
+.sectionhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 30px;
+}
+h2 {
+  font: normal clamp(30px,4vw,44px) Georgia,serif;
+  margin: 8px 0;
+}
+.sectionhead p { color: var(--muted); }
+.music-card {
+  display: grid;
+  grid-template-columns: minmax(220px,360px) 1fr;
+  gap: 30px;
+  padding: 22px;
+  align-items: center;
+  background: linear-gradient(135deg,#1b160f,#0e0c09);
+  border: 1px solid #d9a34466;
+}
+.cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.track-meta .label {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.track-meta h3 {
+  font: normal clamp(27px,3.4vw,42px) Georgia,serif;
+  margin: 10px 0;
+}
+.player {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  accent-color: #d6a84b;
+}
+.price {
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: bold;
+  margin: 15px 0;
+}
+.price small {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: normal;
+}
+.notice {
+  color: #b8aa92;
+  font-size: 12px;
+  margin-top: 14px;
+}
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+.paybox {
+  padding: 23px;
+  border: 1px solid #ffffff18;
+  background: var(--panel);
+}
+.paybox h3 { color: var(--gold); }
+.paybox p { color: var(--muted); font-size: 13px; }
+.status {
+  color: #d6c5a6;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-top: 1px solid #ffffff14;
+  padding-top: 12px;
+}
+.donate {
+  background: radial-gradient(ellipse at 80% 0%,#4d2e0e66,transparent 55%),#110e09;
+}
+.donateinner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+.pill {
+  display: inline-block;
+  border: 1px solid #c48b2f77;
+  color: #f1d394;
+  padding: 5px 9px;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+.footer {
+  border-top: 1px solid #ffffff12;
+  padding: 28px 24px;
+  color: #a99b84;
+  font-size: 12px;
+}
+.footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.smallprint { max-width: 720px; }
+@media(max-width:760px) {
+  .nav { align-items: flex-start; flex-direction: column; }
+  .hero { grid-template-columns: 1fr; gap: 28px; }
+  .music-card { grid-template-columns: 1fr; }
+  .cover { max-width: 440px; margin: auto; }
+  .payment-grid { grid-template-columns: 1fr; }
+  .donateinner { grid-template-columns: 1fr; }
+  .sectionhead { align-items: flex-start; flex-direction: column; }
+}
 </style>
 </head>
 <body>
-<header>
-<a class="brand" href="../">VENDITTELLI WORLD</a>
-<a class="back" href="../">← Torna alla homepage</a>
+<div class="topline"></div>
+
+<header class="nav">
+  <a class="brand" href="#home">DON RICO<span>OFFICIAL</span></a>
+  <nav class="navlinks">
+    <a href="#musica">Musica</a>
+    <a href="#pagamenti">Pagamenti</a>
+    <a href="#donazioni">Donazioni</a>
+    <a href="mailto:paeseitalia1@gmail.com">Contatti</a>
+  </nav>
 </header>
-<section class="hero">
-<div class="eyebrow">Independent Music & Digital Releases</div>
-<h1>DON RICO<br><span>OFFICIAL</span></h1>
-<p>Musica originale. Un'identità distintiva. Scopri le pubblicazioni digitali ufficiali di DON RICO.</p>
-</section>
-<main>
-<section>
-<div class="heading">
-<h2>Music Store</h2>
-<p>Ascolta il brano e scopri la pubblicazione digitale.</p>
-</div>
-<article class="card">
-<div class="cover" aria-hidden="true"><div class="disc"><span>DON RICO</span></div></div>
-<div class="content">
-<span class="tag">DIGITAL MUSIC</span>
-<h3>A Mi Me Gusta Big Tits</h3>
-<p class="description">DON RICO OFFICIAL — pubblicazione musicale digitale.</p>
-<audio controls preload="metadata">
-<source src="./A%20Mi%20Me%20Gusta%20Big%20Tits_DonRicoOfficial.mp3" type="audio/mpeg">
-Il tuo browser non supporta il lettore audio.
-</audio>
-<div class="price">$1.00 USD</div>
-<button class="buy" id="buyButton" type="button">Acquisto di prova — checkout da configurare</button>
-<p class="notice" id="checkoutNotice">Il pagamento non è ancora attivo. Nessun addebito verrà effettuato da questo pulsante. Il checkout PayPal Sandbox deve essere collegato prima di testare l'acquisto.</p>
-</div>
-</article>
-</section>
-<section class="about">
-<h2>About DON RICO OFFICIAL</h2>
-<p>DON RICO OFFICIAL è il progetto musicale all'interno di Vendittelli World. Questa pagina presenta le pubblicazioni digitali ufficiali e sarà aggiornata con i dettagli definitivi dei prodotti.</p>
-</section>
+
+<main id="home">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Official artist page</div>
+      <h1>Il suono del lusso.<br><em>Il ritmo di Don Rico.</em></h1>
+      <p>Benvenuti nella pagina ufficiale di DON RICO OFFICIAL. Ascolta il singolo, sostieni il progetto e torna per scoprire le prossime uscite.</p>
+      <div class="actions">
+        <a class="btn primary" href="#musica">ASCOLTA IL SINGOLO</a>
+        <a class="btn secondary" href="#donazioni">SOSTIENI IL PROGETTO</a>
+      </div>
+      <p class="notice">Musica e aggiornamenti direttamente dall'artista.</p>
+    </div>
+    <div class="heroart">
+      <img src="assets/hero.png" alt="Artwork promozionale DON RICO OFFICIAL">
+    </div>
+  </section>
+
+  <section class="section" id="musica">
+    <div class="wrap">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow">Release 001</div>
+          <h2>Musica ufficiale</h2>
+        </div>
+        <p>Ascolta il singolo ufficiale di DON RICO OFFICIAL.</p>
+      </div>
+
+      <article class="music-card">
+        <img class="cover" src="assets/cover.jpg" alt="Copertina del singolo A Mi Me Gusta Big Tits">
+
+        <div class="track-meta">
+          <div class="label">Singolo · DON RICO OFFICIAL</div>
+          <h3>A Mi Me Gusta Big Tits</h3>
+          <p class="muted">Ascolta il brano direttamente qui. Usa il lettore per avviare o mettere in pausa la musica.</p>
+
+          <audio class="player" controls preload="metadata">
+            <source src="./A%20Mi%20Me%20Gusta%20Big%20Tits_DonRicoOfficial.mp3" type="audio/mpeg">
+            Il browser non supporta la riproduzione audio.
+          </audio>
+
+          <div class="price">€1,00 <small>prezzo previsto del singolo</small></div>
+          <a class="btn primary" href="#pagamenti">ACQUISTA E SCARICA</a>
+
+          <p class="notice">I pagamenti e il download protetto non sono ancora attivi. Non effettuare pagamenti finché il checkout non sarà configurato.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="pagamenti">
+    <div class="wrap">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow">Checkout</div>
+          <h2>Metodi di pagamento</h2>
+        </div>
+        <p>Le opzioni saranno attivate dopo la configurazione e la verifica dell'account venditore.</p>
+      </div>
+
+      <div class="payment-grid">
+        <div class="paybox">
+          <h3>PayPal</h3>
+          <p>Pagamento commerciale tramite un account autorizzato a ricevere pagamenti per prodotti digitali.</p>
+          <div class="status">Non ancora attivo</div>
+        </div>
+        <div class="paybox">
+          <h3>Carte</h3>
+          <p>Pagamenti con carta tramite un processore compatibile, una volta configurato.</p>
+          <div class="status">Da configurare</div>
+        </div>
+        <div class="paybox">
+          <h3>Bonifico bancario</h3>
+          <p>Metodo da valutare dopo aver definito la verifica dell'accredito e la consegna del file.</p>
+          <div class="status">Da configurare</div>
+        </div>
+      </div>
+      <p class="notice">Non inserire credenziali o coordinate bancarie nel codice pubblico del sito.</p>
+    </div>
+  </section>
+
+  <section class="section donate" id="donazioni">
+    <div class="wrap donateinner">
+      <div>
+        <div class="eyebrow">Supporto diretto</div>
+        <h2>Sostieni il progetto.</h2>
+        <p class="muted">Questa sezione potrà essere usata per iniziative di supporto volontario quando saranno definiti chiaramente destinatario e utilizzo dei fondi.</p>
+        <p class="notice">Le donazioni non sono ancora attive.</p>
+      </div>
+      <span class="pill">DON RICO OFFICIAL · COMMUNITY</span>
+    </div>
+  </section>
 </main>
-<footer>
-<p>© <span id="year"></span> DON RICO OFFICIAL · Vendittelli World</p>
-<a href="../">VENDITTELLI WORLD</a>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <strong style="color:#f6c76a;letter-spacing:.12em">DON RICO OFFICIAL</strong>
+      <p>Contatto: <a href="mailto:paeseitalia1@gmail.com">paeseitalia1@gmail.com</a></p>
+    </div>
+    <div class="smallprint">I pulsanti di pagamento non sono ancora collegati a un sistema di checkout. Questa pagina non accetta pagamenti.</div>
+    <div>© 2026 DON RICO OFFICIAL</div>
+  </div>
 </footer>
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("buyButton").addEventListener("click", function () {
-  document.getElementById("checkoutNotice").textContent =
-    "Checkout non ancora configurato. Nessun pagamento è stato eseguito. Il collegamento PayPal Sandbox verrà aggiunto dopo la configurazione sicura delle credenziali.";
-});
-</script>
 </body>
 </html>
-```
