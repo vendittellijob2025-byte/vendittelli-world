@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#050b19">
-  <meta name="description" content="VENDITTELLI WORLD: musica, ricerca scientifica, libri, fumetti e universi narrativi.">
-  <title>VENDITTELLI WORLD — Official Website</title>
+  <meta name="description" content="VENDITTELLI WORLD: musica, ricerca scientifica, libri, fumetti e iniziative di solidarietà.">
+  <title>VENDITTELLI WORLD — Sito ufficiale</title>
 
   <style>
     :root {
@@ -116,6 +116,12 @@
         linear-gradient(145deg, #172c4c, #0c1428 58%, #050914);
     }
 
+    .solidarity::before {
+      background:
+        radial-gradient(ellipse at 75% 18%, #c59a4b50, transparent 43%),
+        linear-gradient(145deg, #34291b, #19150f 58%, #090806);
+    }
+
     .panel::after {
       content: "";
       position: absolute;
@@ -124,7 +130,7 @@
       background: linear-gradient(
         180deg,
         transparent 10%,
-        #05070ce0 100%
+        #05070ce8 100%
       );
     }
 
@@ -261,7 +267,7 @@
       <h1 class="brand">VENDITTELLI WORLD</h1>
       <p class="subtitle">
         Un mondo di musica, ricerca scientifica, libri, fumetti
-        e universi narrativi. Scegli la sezione che vuoi esplorare.
+        e iniziative di solidarietà. Scegli la sezione che vuoi esplorare.
       </p>
       <div class="gold-line" aria-hidden="true"></div>
     </header>
@@ -275,7 +281,7 @@
           <h2>DON RICO OFFICIAL</h2>
           <p>
             Scopri la musica originale, ascolta i brani e accedi
-            al catalogo dei prodotti musicali digitali.
+            al catalogo musicale digitale.
           </p>
           <span class="enter">
             ENTRA NEL MONDO MUSICALE
@@ -300,11 +306,27 @@
         </div>
       </a>
 
+      <a class="panel solidarity" href="./aiuto-60-famiglie/">
+        <div class="symbol" aria-hidden="true">♡</div>
+        <div>
+          <p class="eyebrow">Iniziativa di solidarietà</p>
+          <h2>AIUTIAMO 60 FAMIGLIE IN COLOMBIA</h2>
+          <p>
+            Un appello di solidarietà promosso da Carlo Vendittelli
+            per sostenere 60 operai e le loro famiglie in difficoltà.
+          </p>
+          <span class="enter">
+            SCOPRI COME AIUTARE
+            <span class="arrow" aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+
     </section>
 
     <footer>
       <p>© <span id="year"></span> VENDITTELLI WORLD. Tutti i diritti riservati.</p>
-      <p>Musica · Ricerca scientifica · Libri · Fumetti</p>
+      <p>Musica · Ricerca scientifica · Libri · Fumetti · Solidarietà</p>
     </footer>
   </main>
 
