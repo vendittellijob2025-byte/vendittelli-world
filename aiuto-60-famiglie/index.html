@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#050b19">
-  <meta name="description" content="Iniziativa di solidarietà promossa da Carlo Vendittelli per sostenere 60 lavoratori e le loro famiglie in Colombia.">
+  <meta name="description" content="Iniziativa di solidarietà promossa da Carlo Vendittelli per sostenere 60 lavoratori e le loro famiglie in Colombia dopo il terremoto del 10 agosto 2026.">
   <title>Aiutiamo 60 Famiglie in Colombia — VENDITTELLI WORLD</title>
 
   <style>
@@ -19,6 +19,10 @@
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -43,6 +47,12 @@
       text-decoration: none;
       font-weight: bold;
       margin-bottom: 35px;
+    }
+
+    .back:hover,
+    footer a:hover,
+    .sources a:hover {
+      text-decoration: underline;
     }
 
     header {
@@ -74,7 +84,6 @@
     }
 
     .intro {
-      text-align: center;
       color: var(--gold);
       font-size: 1.15rem;
       font-weight: bold;
@@ -93,7 +102,14 @@
     h2 {
       color: var(--gold);
       font-size: 1.55rem;
+      line-height: 1.35;
       margin: 0 0 20px;
+    }
+
+    h3 {
+      color: var(--gold);
+      font-size: 1.12rem;
+      margin: 25px 0 12px;
     }
 
     p {
@@ -101,6 +117,10 @@
       font-size: 1rem;
       line-height: 1.9;
       margin: 0 0 17px;
+    }
+
+    strong {
+      color: var(--gold);
     }
 
     .highlight {
@@ -124,6 +144,33 @@
       text-align: center;
       color: var(--muted);
       margin-bottom: 25px;
+    }
+
+    .statistics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 25px 0;
+    }
+
+    .stat {
+      background: #ffffff08;
+      border: 1px solid #e4c78235;
+      border-radius: 12px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 7px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.5;
     }
 
     .donation-section {
@@ -181,8 +228,51 @@
     }
 
     .transparency {
-      font-size: .92rem;
-      color: #aeb9cb;
+      font-size: .95rem;
+      color: #c0c8d6;
+    }
+
+    .sources {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #e4c78245;
+    }
+
+    .sources ul {
+      padding-left: 22px;
+      margin: 12px 0 0;
+    }
+
+    .sources li {
+      color: #d8deea;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .sources a {
+      color: var(--gold);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .closing {
+      text-align: center;
+      border: 1px solid #e4c78265;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 25px;
+      background: #ffffff06;
+    }
+
+    .closing p:last-child {
+      margin-bottom: 0;
+    }
+
+    .closing-title {
+      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.6;
     }
 
     footer {
@@ -206,6 +296,10 @@
       .content {
         padding: 23px 19px;
       }
+
+      .statistics {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -218,38 +312,95 @@
     <header>
       <h1>AIUTIAMO 60 FAMIGLIE IN COLOMBIA</h1>
       <div class="line"></div>
+
       <p class="subtitle">
         Un'iniziativa di solidarietà promossa da Carlo Vendittelli
         per sostenere 60 lavoratori e le rispettive famiglie
         che stanno attraversando una situazione di grave difficoltà.
       </p>
+
       <p class="intro">UN APPELLO ALLA SOLIDARIETÀ DEGLI ITALIANI</p>
     </header>
 
     <section class="content">
+
       <div class="number">60</div>
       <p class="number-label">LAVORATORI E LE LORO FAMIGLIE</p>
 
-      <h2>Una storia di lavoro, perdita e solidarietà</h2>
+      <h2>Il terremoto che ha colpito la Colombia</h2>
 
       <p>
-        Mi chiamo Carlo Vendittelli, sono italiano e ho creato
-        un'attività produttiva in Colombia, con l'obiettivo di
-        offrire lavoro e stabilità a numerose persone e alle loro famiglie.
+        Il 10 agosto 2026, alle ore 7:34 del mattino, un violento
+        terremoto di magnitudo 7,4 ha colpito la Colombia,
+        con epicentro nel comune di San José del Palmar,
+        nel dipartimento del Chocó, a una profondità di
+        103 chilometri.
       </p>
 
       <p>
-        A seguito del terremoto e dei gravi danni che ne sono derivati,
-        la fabbrica che avevo realizzato è stata distrutta.
-        Questa perdita ha coinvolto non soltanto la mia attività,
-        ma anche le persone che da essa dipendevano economicamente.
+        Secondo i dati ufficiali pubblicati dalle autorità colombiane,
+        il sisma ha avuto conseguenze in numerose aree del Paese.
+        Il bilancio nazionale della UNGRD, aggiornato a ottobre 2026,
+        registra 778.281 persone coinvolte in 409 comuni
+        di 16 dipartimenti.
+      </p>
+
+      <div class="statistics">
+        <div class="stat">
+          <strong>778.281</strong>
+          <span>Persone coinvolte</span>
+        </div>
+
+        <div class="stat">
+          <strong>409</strong>
+          <span>Comuni interessati</span>
+        </div>
+
+        <div class="stat">
+          <strong>16</strong>
+          <span>Dipartimenti interessati</span>
+        </div>
+
+        <div class="stat">
+          <strong>255.079</strong>
+          <span>Abitazioni danneggiate o distrutte</span>
+        </div>
+      </div>
+
+      <p>
+        Il bilancio ufficiale comprende 203.301 abitazioni
+        danneggiate e 51.778 distrutte, oltre a gravi conseguenze
+        per le strutture scolastiche, le infrastrutture e i servizi.
+        Una catastrofe che ha lasciato moltissime persone nella
+        necessità di ricostruire la propria vita, la propria casa
+        e il proprio futuro.
       </p>
 
       <p>
-        Sessanta operai, insieme alle rispettive famiglie, si sono
-        ritrovati senza il proprio posto di lavoro e, secondo quanto
-        riferito, anche senza la propria abitazione, in condizioni
-        di particolare precarietà.
+        Le informazioni e i dati ufficiali relativi al terremoto
+        sono consultabili nella sezione dedicata alle fonti
+        istituzionali riportata in fondo a questa pagina.
+      </p>
+
+      <h2>La mia storia e quella di 60 famiglie</h2>
+
+      <p>
+        Mi chiamo Carlo Vendittelli, sono italiano e avevo realizzato
+        in Colombia un'attività produttiva dedicata alla fabbricazione
+        di <strong>viti, bulloni e chiodi</strong>, creando
+        un'opportunità di lavoro per 60 persone.
+      </p>
+
+      <p>
+        Purtroppo, il terremoto ha distrutto la fabbrica e ha
+        compromesso il futuro lavorativo di tutti i suoi dipendenti.
+      </p>
+
+      <p>
+        Molti di questi lavoratori e delle loro famiglie hanno perso
+        anche le proprie abitazioni, ritrovandosi improvvisamente
+        senza un lavoro, senza una casa e con enormi difficoltà
+        nel reperire persino i beni di prima necessità.
       </p>
 
       <div class="highlight">
@@ -262,50 +413,122 @@
       <h2>Il mio impegno personale</h2>
 
       <p>
-        Prima di arrivare a chiedere aiuto, ho utilizzato i miei
-        risparmi personali per cercare di sostenere i lavoratori
-        e le loro famiglie.
+        Per cercare di aiutare le persone coinvolte e sostenere
+        i 60 lavoratori e le loro famiglie, ho utilizzato circa
+        <strong>280.000 euro dei miei risparmi personali</strong>,
+        cercando di garantire loro un sostegno durante questo
+        periodo drammatico.
       </p>
 
       <p>
-        Ho impiegato, secondo la mia ricostruzione, circa
-        280.000 euro di risorse personali, cercando di mantenere
-        il sostegno alle persone che avevano lavorato con me.
-        Oggi queste risorse sono esaurite.
+        Una parte importante di queste risorse è stata destinata
+        anche all'acquisto e alla distribuzione immediata di generi
+        di prima necessità per numerose famiglie colpite dal
+        terremoto, compresi molti dei miei vicini di casa.
       </p>
 
       <p>
-        Sono in attesa del rimborso previsto dalla mia assicurazione,
-        che auspico possa consentirmi di avviare la ricostruzione
-        della fabbrica e restituire un lavoro ai sessanta operai.
-        Nel frattempo, le famiglie hanno bisogno di aiuto concreto
-        per affrontare le necessità essenziali.
-      </p>
-
-      <h2>Perché chiedo aiuto agli italiani</h2>
-
-      <p>
-        Mi rivolgo innanzitutto ai miei connazionali italiani,
-        chiedendo un gesto di solidarietà e vicinanza.
-        Ogni contributo volontario potrà aiutare ad affrontare
-        le necessità immediate dei lavoratori e delle loro famiglie.
+        Attualmente sono in attesa del rimborso assicurativo
+        necessario per poter ricostruire la fabbrica e riportare
+        al lavoro le 60 persone che dipendevano da questa attività.
       </p>
 
       <p>
-        Desidero inoltre coinvolgere il sacerdote della comunità
-        locale, il cui nome e la cui eventuale partecipazione
-        saranno indicati quando saranno stati concordati.
+        Nel frattempo, le mie risorse economiche sono ormai esaurite.
+        Oggi, purtroppo, non sono più in grado di sostenere da solo
+        le necessità dei miei 60 lavoratori e delle rispettive famiglie.
       </p>
+
+      <p>
+        Per questo motivo, chiedo un aiuto che possa garantire loro
+        un sostegno concreto per i prossimi <strong>cinque mesi</strong>,
+        con un contributo indicativo di almeno
+        <strong>300 euro mensili per famiglia</strong>.
+      </p>
+
+      <p>
+        Questa somma servirà a coprire le necessità alimentari
+        di prima necessità e il pagamento di una stanza in cui
+        ogni famiglia possa trovare un alloggio, anche temporaneo,
+        in condizioni dignitose.
+      </p>
+
+      <p>
+        Cinque mesi rappresentano il periodo entro il quale prevedo
+        di ricevere il rimborso assicurativo necessario per ricostruire
+        la mia fabbrica e poter offrire nuovamente un lavoro e uno
+        stipendio ai 60 dipendenti.
+      </p>
+
+      <div class="highlight">
+        L'obiettivo indicativo è garantire 300 euro al mese
+        a ciascuna delle 60 famiglie per cinque mesi:
+        18.000 euro mensili e 90.000 euro complessivi.
+      </div>
+
+      <p>
+        Il mio obiettivo è accompagnare queste famiglie in questo
+        difficile periodo di transizione, evitando che rimangano
+        senza sostegno fino alla ripresa dell'attività produttiva.
+      </p>
+
     </section>
 
     <section class="content">
+
+      <h2>Un gesto di solidarietà</h2>
+
+      <p>
+        Questa iniziativa nasce dal desiderio di non abbandonare
+        queste 60 famiglie proprio nel momento in cui hanno
+        più bisogno di aiuto.
+      </p>
+
+      <p>
+        Desidero inoltre ringraziare in particolar modo
+        il sacerdote della comunità <strong>...</strong>,
+        per la sua vicinanza e per il sostegno umano e spirituale
+        alle persone coinvolte.
+      </p>
+
+      <p>
+        Desidero rivolgere un ringraziamento particolare
+        alla <strong>comunità sarda</strong>, per la sua generosità,
+        il suo altruismo e la sua sensibilità dimostrati
+        di fronte a questa tragedia.
+      </p>
+
+      <p>
+        Un gesto di solidarietà che merita tutta la mia riconoscenza,
+        perché una catastrofe naturale può colpire chiunque,
+        in qualsiasi momento, arrivando improvvisamente,
+        senza preavviso e senza fare distinzioni.
+        Nessuno è immune da simili tragedie e proprio per questo
+        la solidarietà umana diventa fondamentale.
+      </p>
+
+      <p>
+        Le donazioni saranno destinate ad aiutare concretamente
+        i lavoratori e le loro famiglie, contribuendo alle necessità
+        quotidiane e all'acquisto dei beni essenziali.
+      </p>
+
+      <p>
+        Ogni contributo, anche piccolo, potrà fare la differenza.
+      </p>
+
+    </section>
+
+    <section class="content">
+
       <h2>Come verranno utilizzate le donazioni</h2>
 
       <p>
         La finalità della raccolta è sostenere le necessità
-        essenziali dei sessanta lavoratori e delle loro famiglie,
-        con particolare attenzione a beni di prima necessità
-        e alle situazioni di maggiore urgenza.
+        essenziali dei 60 lavoratori e delle loro famiglie,
+        con particolare attenzione all'acquisto di generi alimentari
+        di prima necessità e al pagamento di un alloggio temporaneo
+        per ciascuna famiglia.
       </p>
 
       <p>
@@ -315,16 +538,18 @@
       </p>
 
       <p class="transparency">
-        Prima dell'apertura effettiva delle donazioni saranno
-        pubblicate le informazioni relative alla gestione,
-        alla destinazione dei fondi e agli aggiornamenti
-        sull'iniziativa. Eventuali documenti e rendicontazioni
-        saranno condivisi nel rispetto della riservatezza
-        delle famiglie coinvolte.
+        Tutti gli aggiornamenti sui progressi dell'iniziativa
+        saranno pubblicati regolarmente, in base alla ricezione
+        delle donazioni. Sarà possibile seguire concretamente
+        i risultati raggiunti, attraverso la documentazione
+        e la testimonianza dei progressi realizzati grazie
+        alla generosità di chi avrà scelto di contribuire.
       </p>
+
     </section>
 
     <section class="donation-section">
+
       <h2>PUOI CONTRIBUIRE ANCHE TU</h2>
 
       <p>
@@ -347,19 +572,120 @@
         Le coordinate bancarie e il collegamento PayPal
         saranno pubblicati dopo le verifiche necessarie.
       </div>
+
+      <p style="margin-top:22px;">
+        <strong>Intestatario:</strong> Carlo Vendittelli<br>
+        <strong>Causale:</strong> AIUTO VITTIME TERREMOTO IN COLOMBIA
+      </p>
+
+    </section>
+
+    <section class="content">
+
+      <h2>Ogni aiuto sarà un passo verso la rinascita</h2>
+
+      <p>
+        Grazie di cuore per il vostro prezioso aiuto
+        e per la vostra generosità.
+      </p>
+
+      <p>
+        Facciamo in modo che queste famiglie possano trascorrere
+        un Natale tranquillo e sereno.
+      </p>
+
+      <p>
+        Sono famiglie che hanno visto la morte in faccia
+        e che hanno perso completamente tutto ciò per cui
+        avevano lavorato e lottato per anni: le proprie case,
+        i propri beni e il frutto di tanti sacrifici.
+      </p>
+
+      <div class="closing">
+        <p>
+          Non lasciamole sole proprio adesso.
+        </p>
+
+        <p class="closing-title">
+          INSIEME POSSIAMO AIUTARLE A RICOMINCIARE.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="content">
+
+      <h2>Fonti ufficiali</h2>
+
+      <p>
+        I dati relativi all'evento sismico e al bilancio nazionale
+        riportati in questa pagina sono consultabili attraverso
+        i seguenti enti istituzionali:
+      </p>
+
+      <div class="sources">
+
+        <h3>Servicio Geológico Colombiano (SGC)</h3>
+
+        <ul>
+          <li>
+            <a
+              href="https://www2.sgc.gov.co/Noticias/Paginas/SGC-actualiza-la-informacion-sobre-el-sismo-ocurrido-en-San-Jose-del-Palmar-Choco.aspx"
+              target="_blank"
+              rel="noopener noreferrer">
+              Comunicato ufficiale sul terremoto del 10 agosto 2026
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www2.sgc.gov.co/Noticias/Paginas/Secuencia-sismica-asociada-al-evento-de-magnitud-7%2C4-Mw-en-San-Jose-del-Palmar-Choco.aspx"
+              target="_blank"
+              rel="noopener noreferrer">
+              Aggiornamento sulla sequenza sismica del 22 settembre 2026
+            </a>
+          </li>
+        </ul>
+
+        <h3>Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)</h3>
+
+        <ul>
+          <li>
+            <a
+              href="https://portal.gestiondelriesgo.gov.co/pae/Paginas/index.aspx"
+              target="_blank"
+              rel="noopener noreferrer">
+              Piano di recupero e bilancio ufficiale dei danni
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <p class="transparency" style="margin-top:25px;">
+        I dati nazionali descrivono l'impatto generale del terremoto.
+        Le informazioni relative alla fabbrica, ai lavoratori
+        e alle singole famiglie sono riferite dal promotore
+        dell'iniziativa.
+      </p>
+
     </section>
 
     <footer>
+
       <p>
         Iniziativa promossa da Carlo Vendittelli
       </p>
+
       <p>
         <a href="../">VENDITTELLI WORLD</a>
       </p>
+
       <p>
         © <span id="year"></span> VENDITTELLI WORLD.
         Tutti i diritti riservati.
       </p>
+
     </footer>
 
   </main>
@@ -368,5 +694,6 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
+
 </body>
 </html>
