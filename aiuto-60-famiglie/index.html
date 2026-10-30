@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b19">
+  <meta name="description" content="Iniziativa di solidarietà promossa da Carlo Vendittelli per sostenere 60 lavoratori e le loro famiglie in Colombia.">
+  <title>Aiutiamo 60 Famiglie in Colombia — VENDITTELLI WORLD</title>
+
+  <style>
+    :root {
+      --background: #050b19;
+      --panel: #111a2c;
+      --gold: #e4c782;
+      --text: #f5f5f7;
+      --muted: #c0c8d6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 0%, #17294a 0%, transparent 48%),
+        var(--background);
+    }
+
+    .container {
+      width: min(960px, 100%);
+      margin: auto;
+      padding: 35px 22px 55px;
+    }
+
+    .back {
+      display: inline-block;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+      max-width: 720px;
+      margin: 22px auto;
+    }
+
+    .line {
+      width: 100px;
+      height: 2px;
+      margin: 25px auto;
+      background: var(--gold);
+    }
+
+    .intro {
+      text-align: center;
+      color: var(--gold);
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .content {
+      background: linear-gradient(145deg, #17243b, #0b1221);
+      border: 1px solid #e4c78245;
+      border-radius: 18px;
+      padding: clamp(23px, 5vw, 42px);
+      box-shadow: 0 18px 55px #00000045;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      color: var(--gold);
+      font-size: 1.55rem;
+      margin: 0 0 20px;
+    }
+
+    p {
+      color: #d8deea;
+      font-size: 1rem;
+      line-height: 1.9;
+      margin: 0 0 17px;
+    }
+
+    .highlight {
+      border-left: 3px solid var(--gold);
+      padding: 15px 20px;
+      margin: 25px 0;
+      background: #ffffff08;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .number {
+      color: var(--gold);
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      font-weight: 800;
+      text-align: center;
+      margin: 20px 0 5px;
+    }
+
+    .number-label {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .donation-section {
+      text-align: center;
+      background: linear-gradient(145deg, #29251b, #111522);
+      border: 1px solid #e4c78265;
+      border-radius: 18px;
+      padding: clamp(24px, 5vw, 40px);
+      margin-top: 30px;
+    }
+
+    .donation-section h2 {
+      font-size: 1.8rem;
+    }
+
+    .donation-section p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+    }
+
+    .donation-button {
+      display: block;
+      width: min(100%, 390px);
+      margin: 15px auto;
+      padding: 17px 20px;
+      border-radius: 9px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid #ffffff35;
+      cursor: not-allowed;
+      opacity: .8;
+    }
+
+    .paypal {
+      background: #164d78;
+      color: white;
+    }
+
+    .bank {
+      background: #b08a43;
+      color: #111111;
+    }
+
+    .notice {
+      max-width: 650px;
+      margin: 20px auto 0;
+      padding: 14px;
+      border: 1px solid #e4c78255;
+      border-radius: 9px;
+      color: var(--gold);
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    .transparency {
+      font-size: .92rem;
+      color: #aeb9cb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px 0;
+      color: #8792a6;
+      font-size: .85rem;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 15px 40px;
+      }
+
+      .content {
+        padding: 23px 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <a class="back" href="../">← TORNA A VENDITTELLI WORLD</a>
+
+    <header>
+      <h1>AIUTIAMO 60 FAMIGLIE IN COLOMBIA</h1>
+      <div class="line"></div>
+      <p class="subtitle">
+        Un'iniziativa di solidarietà promossa da Carlo Vendittelli
+        per sostenere 60 lavoratori e le rispettive famiglie
+        che stanno attraversando una situazione di grave difficoltà.
+      </p>
+      <p class="intro">UN APPELLO ALLA SOLIDARIETÀ DEGLI ITALIANI</p>
+    </header>
+
+    <section class="content">
+      <div class="number">60</div>
+      <p class="number-label">LAVORATORI E LE LORO FAMIGLIE</p>
+
+      <h2>Una storia di lavoro, perdita e solidarietà</h2>
+
+      <p>
+        Mi chiamo Carlo Vendittelli, sono italiano e ho creato
+        un'attività produttiva in Colombia, con l'obiettivo di
+        offrire lavoro e stabilità a numerose persone e alle loro famiglie.
+      </p>
+
+      <p>
+        A seguito del terremoto e dei gravi danni che ne sono derivati,
+        la fabbrica che avevo realizzato è stata distrutta.
+        Questa perdita ha coinvolto non soltanto la mia attività,
+        ma anche le persone che da essa dipendevano economicamente.
+      </p>
+
+      <p>
+        Sessanta operai, insieme alle rispettive famiglie, si sono
+        ritrovati senza il proprio posto di lavoro e, secondo quanto
+        riferito, anche senza la propria abitazione, in condizioni
+        di particolare precarietà.
+      </p>
+
+      <div class="highlight">
+        Non si tratta soltanto di ricostruire una fabbrica.
+        Si tratta di aiutare persone che hanno perso il lavoro,
+        la casa e la possibilità di provvedere autonomamente
+        alle necessità quotidiane delle proprie famiglie.
+      </div>
+
+      <h2>Il mio impegno personale</h2>
+
+      <p>
+        Prima di arrivare a chiedere aiuto, ho utilizzato i miei
+        risparmi personali per cercare di sostenere i lavoratori
+        e le loro famiglie.
+      </p>
+
+      <p>
+        Ho impiegato, secondo la mia ricostruzione, circa
+        280.000 euro di risorse personali, cercando di mantenere
+        il sostegno alle persone che avevano lavorato con me.
+        Oggi queste risorse sono esaurite.
+      </p>
+
+      <p>
+        Sono in attesa del rimborso previsto dalla mia assicurazione,
+        che auspico possa consentirmi di avviare la ricostruzione
+        della fabbrica e restituire un lavoro ai sessanta operai.
+        Nel frattempo, le famiglie hanno bisogno di aiuto concreto
+        per affrontare le necessità essenziali.
+      </p>
+
+      <h2>Perché chiedo aiuto agli italiani</h2>
+
+      <p>
+        Mi rivolgo innanzitutto ai miei connazionali italiani,
+        chiedendo un gesto di solidarietà e vicinanza.
+        Ogni contributo volontario potrà aiutare ad affrontare
+        le necessità immediate dei lavoratori e delle loro famiglie.
+      </p>
+
+      <p>
+        Desidero inoltre coinvolgere il sacerdote della comunità
+        locale, il cui nome e la cui eventuale partecipazione
+        saranno indicati quando saranno stati concordati.
+      </p>
+    </section>
+
+    <section class="content">
+      <h2>Come verranno utilizzate le donazioni</h2>
+
+      <p>
+        La finalità della raccolta è sostenere le necessità
+        essenziali dei sessanta lavoratori e delle loro famiglie,
+        con particolare attenzione a beni di prima necessità
+        e alle situazioni di maggiore urgenza.
+      </p>
+
+      <p>
+        Le donazioni saranno raccolte sul conto intestato a
+        Carlo Vendittelli e destinate alla finalità dichiarata
+        in questa iniziativa.
+      </p>
+
+      <p class="transparency">
+        Prima dell'apertura effettiva delle donazioni saranno
+        pubblicate le informazioni relative alla gestione,
+        alla destinazione dei fondi e agli aggiornamenti
+        sull'iniziativa. Eventuali documenti e rendicontazioni
+        saranno condivisi nel rispetto della riservatezza
+        delle famiglie coinvolte.
+      </p>
+    </section>
+
+    <section class="donation-section">
+      <h2>PUOI CONTRIBUIRE ANCHE TU</h2>
+
+      <p>
+        Ogni contributo volontario, piccolo o grande,
+        può rappresentare un aiuto concreto per queste famiglie.
+        Grazie a chi vorrà partecipare a questa iniziativa.
+      </p>
+
+      <a class="donation-button paypal" aria-disabled="true">
+        DONA CON PAYPAL
+      </a>
+
+      <a class="donation-button bank" aria-disabled="true">
+        DONA CON BONIFICO BANCARIO
+      </a>
+
+      <div class="notice">
+        Le modalità di pagamento sono in fase di attivazione.
+        I pulsanti non sono ancora operativi.
+        Le coordinate bancarie e il collegamento PayPal
+        saranno pubblicati dopo le verifiche necessarie.
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Iniziativa promossa da Carlo Vendittelli
+      </p>
+      <p>
+        <a href="../">VENDITTELLI WORLD</a>
+      </p>
+      <p>
+        © <span id="year"></span> VENDITTELLI WORLD.
+        Tutti i diritti riservati.
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
