@@ -84,6 +84,20 @@
       letter-spacing: 1px;
     }
 
+    /* FOTOGRAFIA PERSONALE DI CARLO VENDITTELLI */
+    .carlo-photo {
+      display: block;
+      width: min(100%, 390px);
+      max-height: 490px;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      margin: 28px auto;
+      border: 2px solid #e4c78280;
+      border-radius: 15px;
+      box-shadow: 0 15px 45px #00000065;
+    }
+
     .content {
       background: linear-gradient(145deg, #17243b, #0b1221);
       border: 1px solid #e4c78245;
@@ -363,6 +377,7 @@
       .photo-gallery { grid-template-columns: 1fr; }
       .bank-details { padding: 17px; }
       .bank-details strong { min-width: 0; }
+      .carlo-photo { width: min(100%, 320px); }
     }
   </style>
 </head>
@@ -375,6 +390,13 @@
   <header>
     <h1>AIUTIAMO 60 FAMIGLIE IN COLOMBIA</h1>
     <div class="line"></div>
+
+    <!-- UNICA FOTOGRAFIA PERSONALE NELL'INTRODUZIONE -->
+    <img
+      class="carlo-photo"
+      src="./media/foto/io_carlo-vendittelli.jpg"
+      alt="Carlo Vendittelli, promotore dell'iniziativa di solidarietà"
+      fetchpriority="high">
 
     <p class="subtitle">
       Un'iniziativa di solidarietà promossa da Carlo Vendittelli
@@ -526,9 +548,9 @@
     <p>
       Queste cifre rappresentano l'obiettivo che vorrei raggiungere
       per aiutare le famiglie durante il periodo di attesa.
-      La durata effettiva del sostegno dipenderà dalle donazioni 
-      ricevute per poter così coprire i mesi restanti fino ad Aprile  
-      e poter essere io in grado di gestire in maniera concreta a 
+      La durata effettiva del sostegno dipenderà dalle donazioni
+      ricevute per poter così coprire i mesi restanti fino ad Aprile
+      e poter essere io in grado di gestire in maniera concreta a
       favore delle famiglie una situazione dignitosa senza altri traumi.
     </p>
 
