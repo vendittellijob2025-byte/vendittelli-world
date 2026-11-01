@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -295,6 +296,16 @@
       color: var(--muted);
       font-size: .9rem;
       text-align: center;
+    }
+
+    .video-player {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 12px;
+      background: #000;
     }
 
     footer {
@@ -675,32 +686,50 @@
     </div>
 
     <h3>Fotografie</h3>
+
     <div id="photo-gallery" class="photo-gallery">
       <figure>
         <img src="./media/foto/1.jpeg" alt="Documentazione fotografica dei danni causati dal terremoto - fotografia 1" loading="lazy">
         <figcaption>Documentazione fotografica 1</figcaption>
       </figure>
+
       <figure>
         <img src="./media/foto/2.jpeg" alt="Documentazione fotografica dei danni causati dal terremoto - fotografia 2" loading="lazy">
         <figcaption>Documentazione fotografica 2</figcaption>
       </figure>
+
       <figure>
         <img src="./media/foto/3.jpeg" alt="Documentazione fotografica dei danni causati dal terremoto - fotografia 3" loading="lazy">
         <figcaption>Documentazione fotografica 3</figcaption>
       </figure>
+
       <figure>
         <img src="./media/foto/4.jpeg" alt="Documentazione fotografica dei danni causati dal terremoto - fotografia 4" loading="lazy">
         <figcaption>Documentazione fotografica 4</figcaption>
       </figure>
+
       <figure>
         <img src="./media/foto/5.jpeg" alt="Documentazione fotografica dei danni causati dal terremoto - fotografia 5" loading="lazy">
         <figcaption>Documentazione fotografica 5</figcaption>
       </figure>
     </div>
 
-    <h3>Video</h3>
+    <h3>Video documentario</h3>
+
     <div id="video-gallery" class="media-note">
-      <p>Il video documentario sarà inserito prossimamente.</p>
+      <video
+        class="video-player"
+        controls
+        playsinline
+        preload="metadata"
+        aria-label="Video documentario sul terremoto in Colombia">
+        <source src="./media/video/terremoto.mp4" type="video/mp4">
+        Il tuo browser non supporta la riproduzione dei video HTML5.
+      </video>
+
+      <p style="margin-top:14px;">
+        Video documentario relativo alla situazione in Colombia.
+      </p>
     </div>
 
   </section>
