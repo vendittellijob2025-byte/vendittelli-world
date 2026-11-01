@@ -193,8 +193,14 @@
       text-decoration: none;
       text-align: center;
       border: 1px solid #ffffff35;
-      cursor: not-allowed;
-      opacity: .8;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .donation-button:hover {
+      opacity: .88;
+      transform: translateY(-2px);
     }
 
     .paypal { background: #164d78; color: white; }
@@ -209,6 +215,45 @@
       color: var(--gold);
       font-size: .9rem;
       line-height: 1.7;
+    }
+
+    .bank-details {
+      max-width: 650px;
+      margin: 25px auto 0;
+      padding: 22px;
+      border: 1px solid #e4c78265;
+      border-radius: 12px;
+      background: #ffffff08;
+      text-align: left;
+      scroll-margin-top: 25px;
+    }
+
+    .bank-details h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .bank-details p {
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .bank-details strong {
+      display: inline-block;
+      min-width: 125px;
+    }
+
+    .iban {
+      display: block;
+      margin-top: 5px;
+      padding: 12px;
+      border-radius: 7px;
+      background: #00000035;
+      color: var(--gold);
+      font-size: 1.05rem;
+      font-weight: bold;
+      letter-spacing: .5px;
+      overflow-wrap: anywhere;
     }
 
     .transparency {
@@ -256,16 +301,6 @@
       font-weight: bold;
       line-height: 1.6;
     }
-
-    .media-note {
-      padding: 20px;
-      border: 1px dashed #e4c78270;
-      border-radius: 12px;
-      background: #ffffff06;
-      text-align: center;
-    }
-
-    .media-note p:last-child { margin-bottom: 0; }
 
     .photo-gallery {
       display: grid;
@@ -326,6 +361,8 @@
       .content { padding: 23px 19px; }
       .statistics { grid-template-columns: 1fr; }
       .photo-gallery { grid-template-columns: 1fr; }
+      .bank-details { padding: 17px; }
+      .bank-details strong { min-width: 0; }
     }
   </style>
 </head>
@@ -669,22 +706,6 @@
 
     <h2>Fotografie e video: testimonianze della tragedia</h2>
 
-    <p>
-      In questa sezione saranno pubblicate fotografie e registrazioni
-      video realizzate da Carlo Vendittelli per documentare i danni
-      provocati dal terremoto e le conseguenze vissute dalle persone
-      coinvolte.
-    </p>
-
-    <div class="media-note">
-      <p><strong>Documentazione fotografica e video</strong></p>
-      <p>
-        Le fotografie e i video originali saranno aggiunti
-        progressivamente. Questa sezione verrà aggiornata
-        con i materiali disponibili.
-      </p>
-    </div>
-
     <h3>Fotografie</h3>
 
     <div id="photo-gallery" class="photo-gallery">
@@ -716,7 +737,7 @@
 
     <h3>Video documentario</h3>
 
-    <div id="video-gallery" class="media-note">
+    <div id="video-gallery">
       <video
         class="video-player"
         controls
@@ -744,25 +765,56 @@
       Grazie a chi vorrà partecipare a questa iniziativa.
     </p>
 
-    <a class="donation-button paypal" aria-disabled="true">
+    <a
+      class="donation-button paypal"
+      href="https://paypal.me/carlovendittelli"
+      target="_blank"
+      rel="noopener noreferrer">
       DONA CON PAYPAL
     </a>
 
-    <a class="donation-button bank" aria-disabled="true">
+    <a
+      class="donation-button bank"
+      href="#coordinate-bancarie">
       DONA CON BONIFICO BANCARIO
     </a>
 
     <div class="notice">
-      Le modalità di pagamento sono in fase di attivazione.
-      I pulsanti non sono ancora operativi.
-      Le coordinate bancarie e il collegamento PayPal
-      saranno pubblicati dopo le verifiche necessarie.
+      Le donazioni sono volontarie. Per PayPal utilizza il pulsante
+      dedicato; per il bonifico bancario consulta le coordinate
+      riportate qui sotto e inserisci la causale indicata.
     </div>
 
-    <p style="margin-top:22px;">
-      <strong>Intestatario:</strong> Carlo Vendittelli<br>
-      <strong>Causale:</strong> AIUTO VITTIME TERREMOTO IN COLOMBIA
-    </p>
+    <div id="coordinate-bancarie" class="bank-details">
+
+      <h3>COORDINATE PER IL BONIFICO BANCARIO</h3>
+
+      <p>
+        <strong>Intestatario:</strong>
+        Carlo Vendittelli
+      </p>
+
+      <p>
+        <strong>IBAN:</strong>
+        <span class="iban">IT46S0103010000000000596073</span>
+      </p>
+
+      <p>
+        <strong>BIC / SWIFT:</strong>
+        PASCITMMVEC
+      </p>
+
+      <p>
+        <strong>Banca / Filiale:</strong>
+        Vercelli, Piazza Camillo Benso Conte di Cavour 35
+      </p>
+
+      <p>
+        <strong>Causale:</strong>
+        AIUTO VITTIME TERREMOTO IN COLOMBIA
+      </p>
+
+    </div>
 
   </section>
 
