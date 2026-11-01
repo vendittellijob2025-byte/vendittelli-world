@@ -270,6 +270,88 @@
       overflow-wrap: anywhere;
     }
 
+    /* RIQUADRO AGGIORNAMENTO SETTIMANALE DONAZIONI */
+    .progress-box {
+      background: linear-gradient(145deg, #29251b, #111522);
+      border: 2px solid #e4c78285;
+      border-radius: 18px;
+      padding: clamp(23px, 5vw, 38px);
+      margin: 30px 0;
+      text-align: center;
+      box-shadow: 0 15px 45px #00000045;
+    }
+
+    .progress-box h2 {
+      font-size: clamp(1.35rem, 4vw, 1.8rem);
+      margin-bottom: 12px;
+    }
+
+    .progress-subtitle {
+      color: var(--gold);
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: .7px;
+      margin-bottom: 20px;
+    }
+
+    .progress-intro {
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .progress-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 25px 0;
+    }
+
+    .progress-item {
+      background: #ffffff09;
+      border: 1px solid #e4c78255;
+      border-radius: 12px;
+      padding: 20px 12px;
+    }
+
+    .progress-item strong {
+      display: block;
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      margin-bottom: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .progress-item span {
+      display: block;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+
+    .progress-update {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid #e4c78265;
+      border-radius: 12px;
+      background: #00000025;
+      text-align: left;
+    }
+
+    .progress-update h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .progress-update p:last-child {
+      margin-bottom: 0;
+    }
+
+    .progress-note {
+      margin-top: 20px;
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
     .transparency {
       font-size: .95rem;
       color: #c0c8d6;
@@ -375,6 +457,7 @@
       .content { padding: 23px 19px; }
       .statistics { grid-template-columns: 1fr; }
       .photo-gallery { grid-template-columns: 1fr; }
+      .progress-grid { grid-template-columns: 1fr; }
       .bank-details { padding: 17px; }
       .bank-details strong { min-width: 0; }
       .carlo-photo { width: min(100%, 320px); }
@@ -391,10 +474,10 @@
     <h1>AIUTIAMO 60 FAMIGLIE IN COLOMBIA</h1>
     <div class="line"></div>
 
-    <!-- UNICA FOTOGRAFIA PERSONALE NELL'INTRODUZIONE -->
+    <!-- FOTOGRAFIA PERSONALE DI CARLO VENDITTELLI -->
     <img
       class="carlo-photo"
-      src="./media/foto/io_carlo-vendittelli.jpg"
+      src="./media/foto/io_carlo%20vendittelli.jpeg"
       alt="Carlo Vendittelli, promotore dell'iniziativa di solidarietà"
       fetchpriority="high">
 
@@ -837,6 +920,90 @@
       </p>
 
     </div>
+
+  </section>
+
+  <!-- RIQUADRO TRASPARENZA E AGGIORNAMENTO SETTIMANALE -->
+  <section class="progress-box">
+
+    <h2>AGGIORNAMENTO SETTIMANALE DELLE DONAZIONI</h2>
+
+    <p class="progress-subtitle">
+      TRASPARENZA E SOLIDARIETÀ, PASSO DOPO PASSO
+    </p>
+
+    <p class="progress-intro">
+      Ogni settimana pubblicherò un aggiornamento delle donazioni
+      effettivamente ricevute, affinché tutti possano seguire
+      l'andamento della raccolta e conoscere i progressi raggiunti.
+      L'obiettivo è sostenere 60 famiglie con un contributo indicativo
+      di 300 euro al mese per famiglia, fino ad aprile 2027.
+    </p>
+
+    <div class="progress-grid">
+
+      <div class="progress-item">
+        <strong>18.000 €</strong>
+        <span>Obiettivo mensile per sostenere 60 famiglie</span>
+      </div>
+
+      <div class="progress-item">
+        <strong>90.000 €</strong>
+        <span>Obiettivo complessivo previsto per cinque mesi</span>
+      </div>
+
+      <div class="progress-item">
+        <strong>300 €</strong>
+        <span>Contributo mensile indicativo per ciascuna famiglia</span>
+      </div>
+
+      <div class="progress-item">
+        <strong>60</strong>
+        <span>Famiglie che desideriamo sostenere</span>
+      </div>
+
+    </div>
+
+    <div class="progress-update">
+
+      <h3>ULTIMO AGGIORNAMENTO DELLA RACCOLTA</h3>
+
+      <p>
+        <strong>Data aggiornamento:</strong>
+        Da aggiornare
+      </p>
+
+      <p>
+        <strong>Donazioni effettivamente ricevute:</strong>
+        Importo da aggiornare
+      </p>
+
+      <p>
+        <strong>Famiglie equivalenti stimate:</strong>
+        Da calcolare sulla base delle donazioni ricevute,
+        considerando 300 euro per famiglia per un mese.
+      </p>
+
+      <p>
+        <strong>Importo ancora necessario per l'obiettivo mensile:</strong>
+        Da calcolare rispetto al traguardo di 18.000 euro.
+      </p>
+
+    </div>
+
+    <p class="progress-note">
+      Gli importi e i risultati saranno aggiornati manualmente
+      ogni settimana sulla base delle somme effettivamente ricevute.
+      Il numero di famiglie equivalenti rappresenta una stima
+      teorica del sostegno possibile e non certifica, da solo,
+      l'avvenuta distribuzione delle somme alle famiglie.
+      La raccolta è volontaria e il raggiungimento degli obiettivi
+      non è garantito.
+    </p>
+
+    <p class="progress-subtitle" style="margin-top:25px;">
+      INSIEME POSSIAMO AIUTARE 60 FAMIGLIE A RICOMINCIARE.
+    </p>
 
   </section>
 
